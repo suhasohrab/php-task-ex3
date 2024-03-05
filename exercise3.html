@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 2</title>
+  <!-- Foundation CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 0;
+      overflow-x: hidden;
+      height: auto; 
+      margin: 0;
+      border: 2px solid black;
+      border-bottom: 1px solid black; 
+    }
+    header {
+      color: #fff;
+      background-color: white;
+      text-align: center;
+      padding: 0px 0;
+      border-top: 1px solid black; 
+      border-bottom: 1px solid black; 
+    }
+    nav {
+      text-align: right;
+      padding: 10px 0;
+      background-color: white;
+      border-bottom: 1px solid black;
+    }
+    nav a {
+      color: black;
+      text-decoration: none;
+      padding: 5px 10px;
+      font-size: 25px;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+    nav a::after {
+        content: '';
+        display: inline-block;
+        width: 3px;
+        font-weight: bolder;
+        height: 25px; 
+        margin-left: 40px;
+        color:black;
+        background-color: black;
+        vertical-align: middle;
+      }
+      nav a:last-child::after {
+        display: none; 
+      }
+
+    #left-sidebar {
+      background-color: #c9daf8;
+      padding: 20px;
+      border-right: 1px solid black; 
+    }
+    footer {
+      background-color: white;
+      color: black;
+      text-align: center;
+      padding: 20px 0;
+      height:90px;
+      border-top: 1px solid black; 
+    }
+    footer p {
+      margin-top: 12px;
+      font-size: 22px;
+      margin-left:20px;
+    }
+    footer p:first-child {
+      text-align: left;
+      float: left;
+    }
+    footer p:last-child {
+      text-align: right;
+      float: right;
+    }
+
+    @media only screen and (max-width: 600px) {
+      body {
+        height: 100vh; 
+      }
+      footer {
+        height: 50px; 
+      }
+    }
+  </style>
+</head>
+<body>
+    <nav class="top-bar" data-top-bar style="background-color: white;">
+        <div class="top-bar-right" style="background-color: white;">
+            <ul class="menu" style="background-color: white;">
+                <li><a href="#" id="update-body" style="background-color: white;">Update Body</a></li>
+                <li><a href="#" id="alert-button" style="background-color: white;">Alert</a></li>
+            </ul>
+        </div>
+    </nav>
+<header>
+  <img src="img.jpg" alt="Header Image" style="width:100%;height:200px">
+</header>
+
+<div class="grid-x grid-padding-x">
+  <div id="left-sidebar" class="cell large-3">
+    <p style="font-size:22px;">
+      <b>Lorem ipsum</b> dolor sit amet, consectetur adipiscing elit. Proin euismod, risus eget placerat ultrices, urna quam interdum libero.    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, risus eget placerat ultrices, urna quam interdum libero.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, risus eget placerat ultrices, urna quam interdum libero.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, risus eget placerat ultrices, urna quam interdum libero.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    </p>
+  </div>
+
+  <div id="body-content" class="cell large-9">
+    <h3 style="font-size: 24px; font-weight: normal;">Content Page 1</h3>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2024 Muhammad, All Rights Reserved</p>
+  <p>Design by Muhammad.</p>
+</footer>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Foundation JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script>
+<script>
+  $(document).foundation();
+
+  $('#alert-button').click(function() {
+    alert('You clicked the alert button!');
+  });
+
+  $('#update-body').click(function() {
+    $('#body-content').html('<h2>New Body Content</h2>This is the updated body content.</p>');
+  });
+</script>
+
+</body>
+</html>
